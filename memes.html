@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memes_fee1myp31n</title>
+    <style>
+        @import url('fonts/main_font.css');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'StratosSkyeng', sans-serif;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            overflow: hidden;
+            color: #000;
+        }
+
+        .scene {
+            width: 100%;
+            height: 100vh;
+            perspective: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .background-layer {
+            position: absolute;
+            width: 110%;
+            height: 110%;
+            z-index: 1;
+            filter: blur(5px) grayscale(100%);
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .background-layer img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content-card {
+            position: relative;
+            z-index: 10;
+            width: 90%;
+            max-width: 800px;
+            padding: 40px;
+            text-align: center;
+            transition: transform 0.1s ease-out;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            background: #000;
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            font-weight: 900;
+            text-align: center;
+        }
+
+.meme-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto 30px auto; 
+}
+
+
+.meme-item {
+    background: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    align-self: start; 
+}
+
+        .meme-item:hover {
+            transform: scale(1.02);
+        }
+
+        .meme-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            display: block;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid #000;
+            padding: 10px 25px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #000;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="scene">
+    <div class="background-layer" data-speed="15">
+        <img src="./images/kaneki.jpg" alt="Background">
+    </div>
+
+    <div class="content-card" data-speed="5">
+        <div class="nav-links">
+            <a href="./facts.html"> Предыдущая страница</a>
+            <a href="./quotes.html">Следующая страница >>>></a>
+        </div>
+
+        <h1>fee1my-m3m3s</h1>
+
+        <div class="meme-grid">
+            <div class="meme-item"><img src="./images/5222139831020885307.jpg" alt="1st"></div>
+            <div class="meme-item"><img src="./images/5222139831020885308.jpg" alt="2nd"></div>
+            <div class="meme-item"><img src="./images/5222139831020885309.jpg" alt="3rd"></div>
+            <div class="meme-item"><img src="./images/5222139831020885310.jpg" alt="4th"></div>
+        </div>
+
+        <a href="./index.html" class="back-btn">back_to_main</a>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("mousemove", (e) => {
+        const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+        const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+        
+        const bg = document.querySelector(".background-layer");
+        bg.style.transform = `translate(${xAxis * 1.5}px, ${yAxis * 1.5}px)`;
+
+        const card = document.querySelector(".content-card");
+        const cardSpeed = card.getAttribute("data-speed");
+        card.style.transform = `rotateY(${xAxis / cardSpeed}deg) rotateX(${-yAxis / cardSpeed}deg)`;
+    });
+</script>
+
+</body>
+</html>

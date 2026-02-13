@@ -1,0 +1,126 @@
+@import url('fonts/main_font.css');
+
+* {
+    margin: 0;
+    font-family: 'StratosSkyeng', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.title {
+    padding-top: 128px;
+    margin-bottom: 32px;
+    transform: translateY(-40px);
+    transition: all 0.7s ease-out;
+    text-shadow: 1px 1px 1px #000000;  
+}
+
+.content {
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    padding-left: calc(50% - 500px);  
+    padding-right: calc(50% - 500px);
+}
+
+.name {
+    font-size: 24px;
+    margin-bottom: 12px;
+    transform: translateY(-50px);
+    transition: all 0.7s ease-out;
+}
+
+.main-img {
+    width: 50%;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    transform: translateX(-50px);
+    transition: all 0.5s ease-out;
+    box-shadow: rgb(0, 0, 0, 20%) 5px 5px;
+}
+
+.main-text {
+    text-align: left;
+    font-size: 22px;
+    margin-bottom: 16px;
+    transform: translateX(50px);
+    transition: all 0.7s ease-out;
+}
+
+.list-title {
+    text-align: left;
+    font-size: 22px;
+    margin-bottom: 24px;
+    transform: translateX(-50px);
+    transition: all 0.7s ease-out;
+}
+
+.listEl {
+    text-align: left;
+    font-size: 22px;
+    padding-bottom: 24px;
+    transform: translateX(-50px);
+    transition: all 0.7s ease-out;
+}
+
+.meme-img {
+    width: 45%;
+    border-radius: 12px;
+    margin: 16px 0px;
+    transform: rotate(10deg);
+    transition: all 0.8s ease-out;
+    box-shadow: rgb(0, 0, 0, 20%) 5px 5px;
+}
+
+.next-page {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    padding: 11px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 38px;
+    position: absolute;
+    right: 100px;
+    top: 24px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.next-page:hover{
+    background-color: #000000;
+    transform: scale(1.1);
+}
+
+.prev-page {
+    background-color: #000000;
+    color: white;
+    padding: 11px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 38px;
+    position: absolute;
+    left: 100px;
+    top: 24px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.prev-page:hover{
+    background-color: #ffffff;
+    transform: scale(1.1);
+}
+
+.in-one-line {
+    display: flex;
+    gap: 32px;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+    transform: translateY(0);
+    transform: rotate(0deg)
+}
